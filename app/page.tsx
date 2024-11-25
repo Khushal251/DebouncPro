@@ -3,7 +3,7 @@
 'use client'
 
 import axios from "axios";
-import Image from "next/image";
+// import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface DataItem {
@@ -24,12 +24,12 @@ export default function Home() {
 
 
   const fetchData = async () => {
-    try {
+    // try {
       const response = await axios.get('https://api.restful-api.dev/objects');
       setDetails(response.data);
-    } catch (error) {
-      console.error("Error Fetiching Data")
-    }
+    // } catch (error) {
+    //   console.error("Error Fetiching Data")
+    // }
   }
 
   const printItemwithDelay = (items: DataItem[]) => {
